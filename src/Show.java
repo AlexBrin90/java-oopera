@@ -25,9 +25,9 @@ public class Show {
     }
 
     public void setActor(Actor newActor, Actor actorForChange) {
-        System.out.println("Актер успешно заменен! " + actorForChange.surname + " больше не участвует в постановке. Вместо него теперь " + newActor.surname);
         listOfActors.remove(actorForChange);
         listOfActors.add(newActor);
+        System.out.println("Актер успешно заменен! " + actorForChange.surname + " больше не участвует в постановке. Вместо него теперь " + newActor.surname);
     }
 
     public void changeActor(Actor newActor, String surnameActorForChange) {
@@ -43,17 +43,13 @@ public class Show {
             }
         }
 
-        if (isChangeActor == false) {
+        if (!isChangeActor) {
             System.out.println("Актер " + surnameActorForChange + " отсутствует в списке актеров этой постановки.");
         }
-
     }
 
     public String getActors() {
         System.out.println("Список актеров постановки " + title);
         return listOfActors.toString();
     }
-// todo написать метод вывода списка актеров для спектаклей
-
-
 }

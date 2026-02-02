@@ -13,7 +13,6 @@ public class Actor extends Person{
         return "Actor{name=" + name + ", surname='" + surname + " (height=" + height + "}";
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
