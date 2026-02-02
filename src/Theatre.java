@@ -28,6 +28,7 @@ public class Theatre {
         newBallet.addActor(Habenskiy);
         newBallet.addActor(Andreeva);
         newBallet.addActor(Serebryakov);
+        newBallet.addActor(Serebryakov);
         System.out.println("***************");
         System.out.println("Для каждого спектакля выведите на экран список актёров.");
         System.out.println(newShow.getActors());

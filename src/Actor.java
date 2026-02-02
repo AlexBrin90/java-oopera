@@ -35,6 +35,7 @@ public class Actor extends Person{
         if (surname != null) {
             hash += surname.hashCode();
         }
+        hash += height * 29;
         return hash;
     }
 }
