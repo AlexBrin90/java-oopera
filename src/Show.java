@@ -25,7 +25,9 @@ public class Show {
     }
 
     public void setActor(Actor newActor, Actor actorForChange) {
-        actorForChange = newActor;
+        System.out.println("Актер успешно заменен! " + actorForChange.surname + " больше не участвует в постановке. Вместо него теперь " + newActor.surname);
+        listOfActors.remove(actorForChange);
+        listOfActors.add(newActor);
     }
 
     public void changeActor(Actor newActor, String surnameActorForChange) {
@@ -35,7 +37,6 @@ public class Show {
             if (Objects.equals(a.surname, surnameActorForChange)) {
                 actorForChange = a;
                 setActor(newActor, actorForChange);
-                System.out.println("Актер успешно заменен!");
                 return;
             } else {
                 isChangeActor = false;
@@ -53,5 +54,6 @@ public class Show {
         return listOfActors.toString();
     }
 // todo написать метод вывода списка актеров для спектаклей
+
 
 }
