@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Show {
-    String title; // название постановки
-    int duration; // длительность в минутах
-    Director director; // режиссёр
-    ArrayList<Actor> listOfActors; // список актёров
+    protected String title; // название постановки
+    protected int duration; // длительность в минутах
+    protected Director director; // режиссёр
+    protected ArrayList<Actor> listOfActors; // список актёров
 
     public Show(Director director, int duration, ArrayList<Actor> listOfActors, String title) {
         this.director = director;
@@ -24,7 +24,7 @@ public class Show {
 
     }
 
-    public void setActor(Actor newActor, Actor actorForChange) {
+    private void setActor(Actor newActor, Actor actorForChange) {
         listOfActors.remove(actorForChange);
         listOfActors.add(newActor);
         System.out.println("Актер успешно заменен! " + actorForChange.surname + " больше не участвует в постановке. Вместо него теперь " + newActor.surname);
@@ -48,8 +48,8 @@ public class Show {
         }
     }
 
-    public String getActors() {
+    public void getActors() {
         System.out.println("Список актеров постановки " + title);
-        return listOfActors.toString();
+        System.out.println(listOfActors);
     }
 }
