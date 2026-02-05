@@ -31,21 +31,21 @@ public class Theatre {
         newBallet.addActor(Serebryakov);
         System.out.println("***************");
         System.out.println("Для каждого спектакля выведите на экран список актёров.");
-        newShow.getActors();
-        newOpera.getActors();
-        newBallet.getActors();
+        newShow.printActors();
+        newOpera.printActors();
+        newBallet.printActors();
         System.out.println("***************");
         System.out.println("Замените актёра в одном из спектаклей на актёра из другого спектакля и ещё раз выведите для него список актёров.");
         newOpera.changeActor(Habenskiy, "Серебряков");
-        newOpera.getActors();
+        newOpera.printActors();
         System.out.println("***************");
         System.out.println("Попробуйте заменить в другом спектакле несуществующего актёра");
         newShow.changeActor(Serebryakov, "Зайцев");
-        newShow.getActors();
+        newShow.printActors();
         System.out.println("***************");
         System.out.println("Для оперного и балетного спектакля выведите на экран текст либретто.");
-        System.out.println(newOpera.printLiberto());
-        System.out.println(newBallet.printLiberto());
+        newOpera.printLiberto();
+        newBallet.printLiberto();
         System.out.println(Bikov.toString());
         System.out.println(Zvyagincev.toString());
     }

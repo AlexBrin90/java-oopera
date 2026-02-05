@@ -10,8 +10,12 @@ public class MusicalShow extends Show {
         this.musicAuthor = musicAuthor;
     }
 
-    public String printLiberto() {
+    public String getLibretto() {
         return librettoText;
+    }
+
+    public void printLiberto() {
+        System.out.println("Текст либерто: \n" + getLibretto());
     }
 
 }

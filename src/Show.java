@@ -48,7 +48,7 @@ public class Show {
         }
     }
 
-    public void getActors() {
+    public void printActors() {
         System.out.println("Список актеров постановки " + title);
         System.out.println(listOfActors);
     }
